@@ -40,9 +40,9 @@ class FileController extends Controller {
 
     this.LOG.info(args.uuid, 'update find', find)
     if (find) {
-      let step = args.step || find.step + 1
+      let step = args.hasOwnProperty('step') ? args.step : (find.step + 1)
       find.step = step
-      if (step === find.chunks) {
+      if (step == find.chunks) {
         find.status = 1
       }
 
@@ -56,7 +56,7 @@ class FileController extends Controller {
       fileData.ext = args.ext
       fileData.name = args.name || ''
 
-      file = await fileModel.model().create(fileData)
+      let file = await fileModel.model().create(fileData)
       ret.data = file
     }
 

@@ -1,7 +1,6 @@
 // 获取所有方法
 const methods = {
-  info: require('./info'),
-  admin: require('./admin')
+  file: require('./file')
 }
 
 let METHODS = {}

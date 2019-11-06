@@ -39,7 +39,6 @@ class FileModel extends Model {
           type: Sequelize.STRING(12),
           defaultValue: ''
         },
-
         size: {
           type: Sequelize.BIGINT(20),
           defaultValue: 0

@@ -1,23 +1,23 @@
 {
-  "name": "websiteLogicSvr",
+  "name": "utilsPubSvr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev nodemon index.js",
-    "start": "cross-env NODE_ENV=production pm2 start index.js --watch -n websiteLogicSvr"
+    "start": "cross-env NODE_ENV=production pm2 start index.js --watch -n utilsPubSvr"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orangeProject2020/websiteLogicSvr.git"
+    "url": "git+https://github.com/orangeProject2020/utilsPubSvr.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/orangeProject2020/websiteLogicSvr/issues"
+    "url": "https://github.com/orangeProject2020/utilsPubSvr/issues"
   },
-  "homepage": "https://github.com/orangeProject2020/websiteLogicSvr#readme",
+  "homepage": "https://github.com/orangeProject2020/utilsPubSvr#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect": "^3.7.0",
