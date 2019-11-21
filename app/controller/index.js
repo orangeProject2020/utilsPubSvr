@@ -1,6 +1,7 @@
 // 获取所有方法
 const methods = {
-  file: require('./file')
+  file: require('./file'),
+  alipay: require('./alipay')
 }
 
 let METHODS = {}
