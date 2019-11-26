@@ -1,6 +1,7 @@
 // 获取所有方法
 const methods = {
-  file: require('./file')
+  file: require('./file'),
+  app: require('./app')
 }
 
 let METHODS = {}
