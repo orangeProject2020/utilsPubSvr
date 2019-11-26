@@ -1,4 +1,5 @@
 module.exports = {
   port: 10004,
-  db: require('./db')
+  db: require('./db'),
+  alipay: require('./alipay')
 }

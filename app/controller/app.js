@@ -1,5 +1,5 @@
 const Controller = require('../../lib/controller')
-const appDataJson = require('./../../config/appData.json')
+const appDataJson = (process.env.NODE_ENV === 'production') ? require('./../../config/appDataProd.json') : require('./../../config/appData.json')
 
 class AppController extends Controller {
 
@@ -33,6 +33,22 @@ class AppController extends Controller {
     let data = appDataJson[type] || null
     ret.data = data
     return ret
+  }
+
+  async countdown(args, ret) {
+    let now = parseInt(Date.now() / 1000)
+    let today = this.UTILS.dateUtils.dateFormat(null, 'YYYY-MM-DD')
+    let todayEnd = this.UTILS.dateUtils.getTimestamp(today + ' 23:59:59')
+    let second = todayEnd - now
+    let h = parseInt(second / 3600)
+    let m = parseInt((second - h * 3600) / 60)
+    let s = second - h * 3600 - m * 60
+
+    ret.data = {
+      h,
+      m,
+      s
+    }
   }
 
 }

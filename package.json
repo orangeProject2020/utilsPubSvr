@@ -24,8 +24,10 @@
     "jayson": "^3.0.2",
     "log4js": "^4.4.0",
     "md5": "^2.2.1",
+    "moment": "^2.24.0",
     "mysql2": "^1.6.5",
     "request": "^2.88.0",
-    "sequelize": "^5.9.0"
+    "sequelize": "^5.9.0",
+    "superagent": "^5.1.1"
   }
 }
