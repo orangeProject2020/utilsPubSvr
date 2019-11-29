@@ -22,7 +22,7 @@
     "title": "banner2",
     "cover": "http://img.jianpiane.com/uploads/app/banner_2.png",
     "type": "page",
-    "link": "/pages/mall/index"
+    "link": "/mall/index"
   }],
   "categorys": [{
     "id": "1",
