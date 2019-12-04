@@ -14,7 +14,8 @@ class AlipayController extends Controller {
     let totalAmount = parseFloat((args.amount / 100).toFixed(2))
     let body = args.body || ''
     let subject = args.subject
-    let wapPayRet = await AlipaySdk.wapPay(outTradeNo, totalAmount, body, subject)
+    let returnUrl = args.return_url || ''
+    let wapPayRet = await AlipaySdk.wapPay(outTradeNo, totalAmount, body, subject, returnUrl)
     this.LOG.info(args.uuid, '/wapPay wapPayRet', wapPayRet)
     ret.data = {
       action: wapPayRet
