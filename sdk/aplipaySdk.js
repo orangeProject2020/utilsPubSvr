@@ -28,7 +28,7 @@ class AlipaySdk {
     this.getWayUrl = config.dev ? getWayUrlTest : getWayUrl
     this.rsaPrivateKey = '-----BEGIN RSA PRIVATE KEY-----\n' + config.rsaPrivateKey + '\n-----END RSA PRIVATE KEY-----'
     this.alipayPubKey = '-----BEGIN PUBLIC KEY-----\n' + config.alipayPubKey + '\n-----END PUBLIC KEY-----'
-    this.notify_url =  config.notifyUrl
+    this.notify_url = config.notifyUrl
 
     console.log('================', config.dev, this.getWayUrl, )
   }
@@ -91,7 +91,7 @@ class AlipaySdk {
     requestObj.biz_content = JSON.stringify(bizContent)
     let sign = this._sign(requestObj, this.rsaPrivateKey)
     requestObj.sign = sign
-    console.log('obj =========' , requestObj )
+    console.log('obj =========', requestObj)
     // let action = this._buildRquestUrl(requestObj)
     let action = this._buildRquestParams(requestObj)
     console.log(action)
@@ -112,9 +112,9 @@ class AlipaySdk {
    * @param {*} body 
    * @param {*} subject 
    */
-  async wapPay(out_trade_no, total_amount, body, subject) {
+  async wapPay(out_trade_no, total_amount, body, subject, return_url = '') {
     let method = METHOD.WAP
-    let requestObj = this._getRequestObj(method)
+    let requestObj = this._getRequestObj(method, return_url)
 
     let bizContent = {}
     bizContent.out_trade_no = out_trade_no
@@ -125,7 +125,7 @@ class AlipaySdk {
     requestObj.biz_content = JSON.stringify(bizContent)
     let sign = this._sign(requestObj, this.rsaPrivateKey)
     requestObj.sign = sign
-    console.log('obj =========' , requestObj )
+    console.log('obj =========', requestObj)
     // let action = this._buildRquestUrl(requestObj)
     let action = this._buildRquestUrl(requestObj)
     console.log(action)
@@ -162,7 +162,7 @@ class AlipaySdk {
     if (return_url) requestObj.return_url = return_url
     if (notify_url) {
       requestObj.notify_url = notify_url
-    }else {
+    } else {
       requestObj.notify_url = this.notify_url
     }
     return requestObj
@@ -239,7 +239,7 @@ class AlipaySdk {
     let sign = this._sign(requestObj, this.rsaPrivateKey)
     requestObj.sign = sign
 
-    console.log('requestObj' , requestObj)
+    console.log('requestObj', requestObj)
     let action = this._buildRquestUrl(requestObj)
     // console.log('===================',action)
     let resultRequest = await this._requestGet(action)
@@ -266,9 +266,9 @@ class AlipaySdk {
     // console.log('sort str ==================' , sortStr)
     let sign = crypto.createSign('RSA-SHA256')
     sign.update(sortStr)
-    
+
     let str = sign.sign(key, 'base64')
-    console.log('sign str' , str)
+    console.log('sign str', str)
     return str
 
   }
@@ -309,7 +309,7 @@ class AlipaySdk {
     return url
   }
 
-  _buildRquestParams(params){
+  _buildRquestParams(params) {
     let paramsArr = []
     for (let key in params) {
       let paramsValue = encodeURIComponent(params[key])
