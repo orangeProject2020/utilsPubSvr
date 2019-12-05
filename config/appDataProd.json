@@ -17,6 +17,12 @@
     "cover": "http://img.jianpiane.com/uploads/app/banner_1.png",
     "type": "page",
     "link": "/mall/index"
+  }, {
+    "id": "2",
+    "title": "banner2",
+    "cover": "http://img.jianpiane.com/uploads/app/banner_2.png",
+    "type": "page",
+    "link": "/mall/index"
   }],
   "categorys": [{
     "id": "1",
