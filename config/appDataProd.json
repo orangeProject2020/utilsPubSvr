@@ -100,6 +100,12 @@
     "cover": "http://img.jianpiane.com/uploads/app/female_2.png",
     "type": "pageMall",
     "link": "/goods/detail?id=10"
+  }, {
+    "id": "3",
+    "title": "female_3",
+    "cover": "http://img.jianpiane.com/uploads/app/female_3.png",
+    "type": "pageMall",
+    "link": "/goods/detail?id=10"
   }],
   "mallBanners": [{
     "id": "2",
