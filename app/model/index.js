@@ -1,4 +1,5 @@
 module.exports = {
   userModel: require('./user'),
-  fileModel: require('./file')
+  fileModel: require('./file'),
+  smsModel: require('./sms')
 }

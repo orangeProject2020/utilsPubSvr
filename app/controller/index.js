@@ -2,7 +2,8 @@
 const methods = {
   file: require('./file'),
   app: require('./app'),
-  alipay: require('./alipay')
+  alipay: require('./alipay'),
+  sms: require('./sms')
 }
 
 let METHODS = {}
