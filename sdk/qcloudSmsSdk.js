@@ -3,8 +3,8 @@ const tencentcloud = require("tencentcloud-sdk-nodejs")
 class QcloudSms {
 
   constructor(opts) {
-    let Client = tencentcloud.sms.v20190711.client
-    let models = tencentcloud.sms.v20190711.models
+    let Client = tencentcloud.sms.v20190711.Client
+    let models = tencentcloud.sms.v20190711.Models
 
     let Credential = tencentcloud.common.Credential
     let cred = new Credential(opts.secretId, opts.secretKey)
@@ -23,7 +23,7 @@ class QcloudSms {
 
     let req = new this.models.SendSmsRequest()
     req.deserialize({
-      PhoneNumberSet: [mobile],
+      PhoneNumberSet: ['+86' + mobile],
       TemplateID: this.verifyCodeTemplateId,
       SmsSdkAppid: this.sdkAppId,
       Sign: this.verifyCodeSign,

@@ -33,24 +33,26 @@ class SmsController extends Controller {
     let verifyCode = parseInt(Math.random() * 1000000).toString()
     this.LOG.info(args.uuid, '/sendVerifyCode verifyCode', verifyCode)
 
-    // try {
-    //   let smsConfig = this.CONFIG.sms
-    //   let qcloudSms = new this.QcloudSms(smsConfig)
-    //   let smsSendRes = await qcloudSms.sendVerifyCode(mobile, verifyCode)
-    //   if (smsSendRes && smsSendRes.SendStatusSet.length) {
-    //     let smsSendStatusCode = smsSendRes.SendStatusSet[0].Code
-    //     if (smsSendStatusCode.toLowerCase() !== 'ok') {
-    //       throw new Error(smsSendRes.SendStatusSet[0].message)
-    //     }
-    //   } else {
-    //     throw new Error('发送短信出现错误')
-    //   }
-    // } catch (err) {
-    //   this.LOG.error(args.uuid, '/sendVerifyCode err:', err)
-    //   ret.code = 1
-    //   ret.message = err.message || err
-    //   return ret
-    // }
+    try {
+      let smsConfig = this.CONFIG.sms
+      let qcloudSms = new this.QcloudSms(smsConfig)
+      let smsSendRes = await qcloudSms.sendVerifyCode(mobile, verifyCode)
+      if (smsSendRes && smsSendRes.SendStatusSet.length) {
+        this.LOG.info(args.uuid, '/sendVerifyCode smsSendRes', smsSendRes)
+        let smsSendStatusCode = smsSendRes.SendStatusSet[0].Code
+        if (smsSendStatusCode.toLowerCase() !== 'ok') {
+          throw new Error(smsSendRes.SendStatusSet[0].Message)
+        }
+      } else {
+        throw new Error('发送短信出现错误')
+      }
+    } catch (err) {
+      console.error(Error)
+      this.LOG.error(args.uuid, '/sendVerifyCode err:', err)
+      ret.code = 1
+      ret.message = err.message || err
+      return ret
+    }
 
     let smsDbRet = await smsModel.model().create({
       mobile: mobile,

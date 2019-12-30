@@ -29,6 +29,6 @@
     "request": "^2.88.0",
     "sequelize": "^5.9.0",
     "superagent": "^5.1.1",
-    "tencentcloud-sdk-nodejs": "^3.0.104"
+    "tencentcloud-sdk-nodejs": "^3.0.110"
   }
 }
