@@ -12,12 +12,6 @@
     }
   },
   "banners": [{
-    "id": "1",
-    "title": "banner1",
-    "cover": "http://img.sunonenight.com/uploads/app/banner_1.png",
-    "type": "page",
-    "link": "/mall/index"
-  }, {
     "id": "2",
     "title": "banner2",
     "cover": "http://img.sunonenight.com/uploads/app/banner_2.png",
@@ -55,63 +49,45 @@
     "title": "package0",
     "cover": "http://img.sunonenight.com/uploads/app/package_1.png",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=12"
   }, {
     "id": "1",
     "title": "package1",
     "cover": "http://img.sunonenight.com/uploads/app/package_2.png",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=13"
   }, {
     "id": "2",
     "title": "package2",
     "cover": "http://img.sunonenight.com/uploads/app/package_3.png",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=14"
   }, {
     "id": "3",
     "title": "package3",
     "cover": "http://img.sunonenight.com/uploads/app/package_4.png",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=15"
   }],
   "males": [{
     "id": "1",
     "title": "male1",
-    "cover": "http://img.sunonenight.com/uploads/app/male_1.png",
+    "cover": "http://img.sunonenight.com/uploads/20200102/47bb7843-2571-4970-99e9-cbb42cc975d0.jpg",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=17"
   }, {
     "id": "2",
     "title": "male2",
-    "cover": "http://img.sunonenight.com/uploads/app/male_2.png",
+    "cover": "http://img.sunonenight.com/uploads/20200102/c127b6b3-b85d-4b4b-8454-b45f71f01fbf.jpg",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
-  }, {
-    "id": "3",
-    "title": "male3",
-    "cover": "http://img.sunonenight.com/uploads/app/male_3.png",
-    "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=18"
   }],
   "females": [{
     "id": "1",
     "title": "female_1",
-    "cover": "http://img.sunonenight.com/uploads/app/female_1.png",
+    "cover": "http://img.sunonenight.com/uploads/20200102/80e1fd37-6617-47e4-83a5-99659ad0bb2d.jpg",
     "type": "pageMall",
-    "link": "/goods/detail?id=10"
-  }, {
-    "id": "2",
-    "title": "female_2",
-    "cover": "http://img.sunonenight.com/uploads/app/female_2.png",
-    "type": "pageMall",
-    "link": "/goods/detail?id=10"
-  }, {
-    "id": "3",
-    "title": "female_3",
-    "cover": "http://img.sunonenight.com/uploads/app/female_3.png",
-    "type": "pageMall",
-    "link": "/goods/detail?id=10"
+    "link": "/goods/detail?id=19"
   }],
   "mallBanners": [{
     "id": "2",

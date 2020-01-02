@@ -3,6 +3,7 @@ const methods = {
   file: require('./file'),
   app: require('./app'),
   alipay: require('./alipay'),
+  wxpay: require('./wxpay'),
   sms: require('./sms')
 }
 
