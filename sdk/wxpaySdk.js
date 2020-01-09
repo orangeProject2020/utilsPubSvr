@@ -125,7 +125,7 @@ class WxPay {
       ret.code = 1
       ret.message = result.err_code_des || result.return_msg
     }
-
+    log.info('unifiedorder ret', ret)
     return ret
   }
 
