@@ -3,6 +3,7 @@ const request = require('request')
 const uuidv4 = require('uuid/v4')
 const crypto = require('crypto')
 const xml2js = require('xml2js')
+const log = require('./../lib/log')('wxpay_sdk')
 // const config = require('./../../config').wxpay
 // const {
 //   domain,
@@ -107,12 +108,12 @@ class WxPay {
     unifiedOrderObj.sign = signStr
 
     // return unifiedOrderObj
-    console.log('unifiedorder unifiedOrderObj', unifiedOrderObj)
+    log.info('unifiedorder unifiedOrderObj', unifiedOrderObj)
     let unifiedOrderUrl = API_URL + '/pay/unifiedorder'
     let response = await this._httpPost(unifiedOrderUrl, unifiedOrderObj, 'xml')
 
     let result = await this._xmlToObj(response)
-    console.log('unifiedorder result', result)
+    log.info('unifiedorder result', result)
 
     let ret = {
       code: 0,
@@ -136,6 +137,7 @@ class WxPay {
         wap_name: body
       }
     }
+    console.log('/h5Pay sceneInfo', sceneInfo)
     let ret = await this.unifiedOrder(body + '-' + subject, outTradeNo, totalAmount, ip, 'MWEB', '', '', sceneInfo)
     return ret
   }
@@ -182,7 +184,7 @@ class WxPay {
   _sign(signObj) {
 
     let sortStr = this._keySortStr(signObj, this.key)
-    // console.log('========================' , sortStr)
+    // log.info('========================' , sortStr)
     let hash = crypto.createHash('md5')
     hash.update(sortStr)
     let signStr = hash.digest('hex')
@@ -226,11 +228,11 @@ class WxPay {
   }
 
   _objToXml(obj) {
-    // console.log('_objToXml================' , obj)
+    // log.info('_objToXml================' , obj)
     // var builder = new xml2js.Builder()
     // var jsonxml = builder.buildObject(obj)
 
-    // console.log('_objToXml================' , jsonxml)
+    // log.info('_objToXml================' , jsonxml)
     // return jsonxml
     let xml = '<xml>'
     for (let key in obj) {
@@ -240,7 +242,7 @@ class WxPay {
 
     }
     xml += '</xml>'
-    // console.log('_objToXml================' , xml)
+    // log.info('_objToXml================' , xml)
     return xml
   }
 
@@ -255,16 +257,16 @@ class WxPay {
         if (!error && response.statusCode == 200) {
           resolve(body)
         }
-        // console.log('error:', error); // Print the error if one occurred
-        // console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        // console.log('body:', body); // Print the HTML for the Google homepage.
+        // log.info('error:', error); // Print the error if one occurred
+        // log.info('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+        // log.info('body:', body); // Print the HTML for the Google homepage.
       })
     })
 
   }
 
   _httpPost(action, data = {}, method = 'json') {
-    // console.log('xml================' , data)
+    // log.info('xml================' , data)
     let contentType = 'application/json'
     let body = data
     if (method == 'json') {
@@ -277,7 +279,7 @@ class WxPay {
       body = this._objToXml(data)
 
     }
-    // console.log('===================' , body)
+    // log.info('===================' , body)
     return new Promise((resolve, reject) => {
       request({
         url: action,
