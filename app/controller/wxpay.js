@@ -23,14 +23,17 @@ class WxpayController extends Controller {
     this.LOG.info(args.uuid, '/h5Pay ip:', ip)
 
     let payRet = await wxpaySdk.h5Pay(outTradeNo, totalAmount, body, subject, returnUrl, ip)
-    this.LOG.info(args.uuid, '/h5Pay ret', payRet)
+    this.LOG.info(args.uuid, '/h5Pay payRet', payRet)
     if (payRet.code) {
-      return payRet
+      ret.code = payRet.code
+      ret.message = payRet.message || ''
+      return ret
     }
 
     ret.data = {
       action: payRet.data.mweb_url
     }
+    this.LOG.info(args.uuid, '/h5Pay ret', ret)
     return ret
   }
 
