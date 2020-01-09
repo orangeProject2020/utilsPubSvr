@@ -19,7 +19,7 @@ class WxpayController extends Controller {
     let config = this.CONFIG.wxpay.h5
     let wxpaySdk = new WxpaySdk(config)
 
-    let ip = req.ip.match(/\d+\.\d+\.\d+\.\d+/)
+    let ip = args.ip || ''
     this.LOG.info(args.uuid, '/h5Pay ip:', ip)
 
     let payRet = await wxpaySdk.h5Pay(outTradeNo, totalAmount, body, subject, returnUrl, ip)
