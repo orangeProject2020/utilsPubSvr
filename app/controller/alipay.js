@@ -32,7 +32,8 @@ class AlipayController extends Controller {
     let toAccountTransferRet = await AlipaySdk.toAccountTransfer(outBizNo, payeeAccount, amount)
     this.LOG.info(args.uuid, '/toAccountTransfer toAccountTransferRet', toAccountTransferRet)
 
-    return toAccountTransferRet
+    ret = toAccountTransferRet
+    return ret
 
   }
 }
