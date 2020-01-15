@@ -203,7 +203,7 @@ class WxPay {
     let sdic = Object.keys(obj).sort()
     let strArr = []
     for (let k in sdic) {
-      if (obj[sdic[k]]) {
+      if (obj[sdic[k]] !== null) {
         strArr.push(sdic[k] + '=' + obj[sdic[k]])
       }
     }
