@@ -245,7 +245,7 @@ class WxPay {
 
     }
     xml += '</xml>'
-    // log.info('_objToXml================' , xml)
+    log.info('_objToXml================', xml)
     return xml
   }
 
