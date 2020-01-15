@@ -105,6 +105,7 @@ class WxPay {
     }
 
     let signStr = this._sign(unifiedOrderObj)
+    log.info('unifiedorder signStr', signStr)
     unifiedOrderObj.sign = signStr
 
     // return unifiedOrderObj
@@ -132,7 +133,7 @@ class WxPay {
   async h5Pay(outTradeNo, totalAmount, body, subject, returnUrl, ip = '') {
     let sceneInfo = {
       h5_info: {
-        type: 'h5_info',
+        type: 'Wap',
         wap_url: returnUrl,
         wap_name: body
       }
