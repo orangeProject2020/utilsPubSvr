@@ -4,6 +4,7 @@ const uuidv4 = require('uuid/v4')
 const crypto = require('crypto')
 const xml2js = require('xml2js')
 const log = require('./../lib/log')('wxpay_sdk')
+const md5 = require('md5')
 // const config = require('./../../config').wxpay
 // const {
 //   domain,
@@ -186,9 +187,10 @@ class WxPay {
 
     let sortStr = this._keySortStr(signObj, this.key)
     log.info('========================', sortStr)
-    let hash = crypto.createHash('md5')
-    hash.update(sortStr)
-    let signStr = hash.digest('hex')
+    // let hash = crypto.createHash('md5')
+    // hash.update(sortStr)
+    // let signStr = hash.digest('hex')
+    let signStr = md5(sortStr)
 
     return signStr.toUpperCase()
   }
