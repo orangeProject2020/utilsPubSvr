@@ -137,7 +137,7 @@ class WxPay {
         wap_name: body
       }
     }
-    console.log('/h5Pay sceneInfo', sceneInfo)
+    log.info('/h5Pay sceneInfo', sceneInfo)
     let ret = await this.unifiedOrder(body + '-' + subject, outTradeNo, totalAmount, ip, 'MWEB', '', '', sceneInfo)
     return ret
   }
@@ -184,7 +184,7 @@ class WxPay {
   _sign(signObj) {
 
     let sortStr = this._keySortStr(signObj, this.key)
-    // log.info('========================' , sortStr)
+    log.info('========================', sortStr)
     let hash = crypto.createHash('md5')
     hash.update(sortStr)
     let signStr = hash.digest('hex')
