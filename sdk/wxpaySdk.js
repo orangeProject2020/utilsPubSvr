@@ -132,7 +132,7 @@ class WxPay {
   async h5Pay(outTradeNo, totalAmount, body, subject, returnUrl, ip = '') {
     let sceneInfo = {
       h5_info: {
-        type: 'Wap',
+        type: 'h5_info',
         wap_url: returnUrl,
         wap_name: body
       }
