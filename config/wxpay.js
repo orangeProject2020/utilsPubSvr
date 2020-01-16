@@ -1,5 +1,4 @@
 module.exports = {
-
   h5: {
     app_id: 'wxe347dd259dc36edd',
     mch_id: '1573075611',
