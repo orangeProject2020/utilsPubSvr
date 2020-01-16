@@ -89,7 +89,7 @@ class WxPay {
       // detail : obj.detail,
       attach: attach || '',
       out_trade_no: out_trade_no,
-      fee_type: 'CNY',
+      // fee_type: 'CNY',
       total_fee: parseInt(total_fee),
       spbill_create_ip: ip,
       notify_url: this.notify_url,
@@ -100,14 +100,15 @@ class WxPay {
     if (payment_type == 'JSAPI') {
       unifiedOrderObj.openid = openid
     }
-
     if (scene_info) {
       unifiedOrderObj.scene_info = JSON.stringify(scene_info)
     }
 
+
     let signStr = this._sign(unifiedOrderObj)
     log.info('unifiedorder signStr', signStr)
     unifiedOrderObj.sign = signStr
+
 
     // return unifiedOrderObj
     log.info('unifiedorder unifiedOrderObj', unifiedOrderObj)
@@ -132,15 +133,21 @@ class WxPay {
   }
 
   async h5Pay(outTradeNo, totalAmount, body, subject, returnUrl, ip = '') {
-    let sceneInfo = {
-      h5_info: {
-        type: 'Wap',
-        wap_url: returnUrl,
-        wap_name: body
-      }
-    }
+    // let sceneInfo = {
+    //   h5_info: {
+    //     type: 'Wap',
+    //     wap_name: body,
+    //     wap_url: returnUrl
+    //   }
+    // }
+    let sceneInfo = '';
     log.info('/h5Pay sceneInfo', sceneInfo)
     let ret = await this.unifiedOrder(body + '-' + subject, outTradeNo, totalAmount, ip, 'MWEB', '', '', sceneInfo)
+    return ret
+  }
+
+  async miniPay(outTradeNo, totalAmount, body, subject, openid, ip) {
+    let ret = await this.unifiedOrder(body + '-' + subject, outTradeNo, totalAmount, ip, 'JSAPI', openid, '', '')
     return ret
   }
 
