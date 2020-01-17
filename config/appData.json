@@ -42,8 +42,8 @@
     "id": "4",
     "title": "taotao",
     "cover": "http://127.0.0.1:10021/uploads/app/category_4.png",
-    "type": "pageMall",
-    "link": "/list"
+    "type": "page",
+    "link": "/mall/index?category=2"
   }],
   "recommends": [],
   "packages": [{

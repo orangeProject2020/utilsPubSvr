@@ -42,8 +42,8 @@
     "id": "4",
     "title": "taotao",
     "cover": "http://img.sunonenight.com/uploads/app/category_4.png",
-    "type": "pageMall",
-    "link": "/list"
+    "type": "page",
+    "link": "/mall/index?category=8"
   }],
   "recommends": [],
   "packages": [{
