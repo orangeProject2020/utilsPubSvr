@@ -1,14 +1,14 @@
 {
   "update": {
     "android": {
-      "version": "0.9.0",
+      "version": "0.9.1",
       "url": "https://www.pgyer.com/bYfq",
       "notes": [
         "修复若干bug"
       ]
     },
     "ios": {
-      "version": "0.9.0",
+      "version": "0.9.1",
       "url": "https://www.pgyer.com/lXGd",
       "notes": ["修复若干bug"]
     }
