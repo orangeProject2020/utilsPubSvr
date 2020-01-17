@@ -10,6 +10,7 @@ class AppController extends Controller {
 
     let update = appDataJson.update
     let updatePlatform = update[platform] || null
+    this.LOG.info(args.uuid, '/update updatePlatform', updatePlatform)
     if (updatePlatform && updatePlatform.version != version) {
       ret.data = {
         version: updatePlatform.version,
@@ -22,6 +23,8 @@ class AppController extends Controller {
         status: 0
       }
     }
+    this.LOG.info(args.uuid, '/update ret', ret)
+    return ret
   }
 
   async indexData(args, ret) {
