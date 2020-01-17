@@ -1,14 +1,16 @@
 {
   "update": {
     "andriod": {
-      "version": "1.0.0",
+      "version": "0.9.0",
       "url": "https://www.pgyer.com/bYfq",
-      "notes": []
+      "notes": [
+        "修复若干bug"
+      ]
     },
     "ios": {
-      "version": "1.0.0",
+      "version": "0.9.0",
       "url": "https://www.pgyer.com/lXGd",
-      "notes": []
+      "notes": ["修复若干bug"]
     }
   },
   "banners": [{
