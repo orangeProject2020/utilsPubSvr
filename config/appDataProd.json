@@ -50,42 +50,48 @@
       "title": "安太医喷剂技巧版",
       "cover": "http://img.sunonenight.com/uploads/app/goods_33.jpg",
       "type": "pageMall",
-      "link": "/goods/detail?id=33"
+      "link": "/goods/detail?id=33",
+      "desc": ""
     },
     {
       "id": "87",
       "title": "joker萌莎跳蛋",
       "cover": "http://img.sunonenight.com/uploads/app/goods_87.jpg",
       "type": "pageMall",
-      "link": "/goods/detail?id=87"
+      "link": "/goods/detail?id=87",
+      "desc": ""
     },
     {
       "id": "79",
       "title": "丸奈喷剂（金刚款）",
       "cover": "http://img.sunonenight.com/uploads/app/goods_79.jpg",
       "type": "pageMall",
-      "link": "/goods/detail?id=79"
+      "link": "/goods/detail?id=79",
+      "desc": ""
     },
     {
       "id": "112",
       "title": "嗨蛋舌舔器3代",
       "cover": "http://img.sunonenight.com/uploads/app/goods_112.jpg",
       "type": "pageMall",
-      "link": "/goods/detail?id=112"
+      "link": "/goods/detail?id=112",
+      "desc": ""
     },
     {
       "id": "123",
       "title": "卡迪娜旋转杯",
       "cover": "http://img.sunonenight.com/uploads/app/goods_123.jpg",
       "type": "pageMall",
-      "link": "/goods/detail?id=123"
+      "link": "/goods/detail?id=123",
+      "desc": ""
     },
     {
       "id": "137",
       "title": "风情私房情人",
       "cover": "http://img.sunonenight.com/uploads/app/goods_137.jpg",
       "type": "pageMall",
-      "link": "/goods/detail?id=137"
+      "link": "/goods/detail?id=137",
+      "desc": ""
     }
   ],
   "packages": [{
@@ -134,7 +140,7 @@
   }, {
     "id": "33",
     "title": "安太医喷剂技巧版",
-    "cover": "http://img.sunonenight.com/uploads/20200310/26b16fbb-382e-456c-9101-29eaefe16eaa.jpg",
+    "cover": "http://img.sunonenight.com/uploads/20200120/c308d65e-345b-4419-8d3f-7c51e6b8cf3c.jpg",
     "type": "pageMall",
     "link": "/goods/detail?id=33"
   }],
