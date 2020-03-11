@@ -34,6 +34,7 @@ class AppController extends Controller {
       return ret
     }
     let data = appDataJson[type] || null
+    this.LOG.info(args.uuid, '/indexData data', data)
     ret.data = data
     return ret
   }
