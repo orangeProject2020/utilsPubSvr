@@ -120,30 +120,45 @@
     "link": "/goods/detail?id=15"
   }],
   "males": [{
-    "id": "127",
-    "title": "艾莱特吮吸杯",
-    "cover": "http://img.sunonenight.com/uploads/20200310/9fc84613-99ec-4384-9066-75e0c56cb385.jpg",
-    "type": "pageMall",
-    "link": "/goods/detail?id=127"
-  }, {
-    "id": "126",
-    "title": "女王荣耀飞机杯",
-    "cover": "http://img.sunonenight.com/uploads/20200310/26b16fbb-382e-456c-9101-29eaefe16eaa.jpg",
-    "type": "pageMall",
-    "link": "/goods/detail?id=126"
-  }, {
-    "id": "79",
-    "title": "丸奈喷剂（金刚款）",
-    "cover": "http://img.sunonenight.com/uploads/20200301/ad7df7d5-84ab-4ba7-8d1a-92212b4c3d5d.jpg",
-    "type": "pageMall",
-    "link": "/goods/detail?id=79"
-  }, {
-    "id": "33",
-    "title": "安太医喷剂技巧版",
-    "cover": "http://img.sunonenight.com/uploads/20200120/c308d65e-345b-4419-8d3f-7c51e6b8cf3c.jpg",
-    "type": "pageMall",
-    "link": "/goods/detail?id=33"
-  }],
+      "id": "127",
+      "title": "艾莱特吮吸杯",
+      "cover": "http://img.sunonenight.com/uploads/20200310/9fc84613-99ec-4384-9066-75e0c56cb385.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=127"
+    }, {
+      "id": "126",
+      "title": "女王荣耀飞机杯",
+      "cover": "http://img.sunonenight.com/uploads/20200310/26b16fbb-382e-456c-9101-29eaefe16eaa.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=126"
+    }, {
+      "id": "79",
+      "title": "丸奈喷剂（金刚款）",
+      "cover": "http://img.sunonenight.com/uploads/20200301/ad7df7d5-84ab-4ba7-8d1a-92212b4c3d5d.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=79"
+    }, {
+      "id": "33",
+      "title": "安太医喷剂技巧版",
+      "cover": "http://img.sunonenight.com/uploads/20200120/c308d65e-345b-4419-8d3f-7c51e6b8cf3c.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=33"
+    },
+    {
+      "id": "42",
+      "title": "蘑菇先生2代",
+      "cover": "http://img.sunonenight.com/uploads/20200301/8c56111e-d35c-4afc-84fa-d59924a50d99.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=42"
+    },
+    {
+      "id": "27",
+      "title": "OLO龟龍筋锁精黄色",
+      "cover": "http://img.sunonenight.com/uploads/20200120/a8e0310d-487d-4214-b2b7-6f424d3fbd28.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=27"
+    }
+  ],
   "females": [{
       "id": "141",
       "title": "夜店包臀短裙",
@@ -170,6 +185,20 @@
       "cover": "http://img.sunonenight.com/uploads/20200302/7c13259d-5eaa-4cae-852c-12f5b7f370db.jpg",
       "type": "pageMall",
       "link": "/goods/detail?id=87"
+    },
+    {
+      "id": "90",
+      "title": "穿戴蝴蝶",
+      "cover": "http://img.sunonenight.com/uploads/20200302/48281e58-af07-4aca-ad8f-44fb11d26837.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=90"
+    },
+    {
+      "id": "93",
+      "title": "潮浪遥控跳蛋",
+      "cover": "http://img.sunonenight.com/uploads/20200302/08f5b02c-79ea-489d-ac36-7368bb49dcda.jpg",
+      "type": "pageMall",
+      "link": "/goods/detail?id=93"
     }
   ],
   "mallBanners": [{
