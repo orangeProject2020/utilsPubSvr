@@ -40,7 +40,7 @@ class AppController extends Controller {
   }
 
   async userPageConfig(args, ret) {
-    let data = appDataJson.userPage || null
+    let data = appDataJson.userPage || {}
     this.LOG.info(args.uuid, '/userPageConfig data', data)
     ret.data = data
     return ret
