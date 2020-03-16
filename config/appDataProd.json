@@ -8,10 +8,13 @@
       ]
     },
     "ios": {
-      "version": "0.9.1",
+      "version": "1.0.0",
       "url": "https://www.pgyer.com/lXGd",
       "notes": ["修复若干bug"]
     }
+  },
+  "userPage": {
+    "isIosUpdate": 0
   },
   "banners": [{
     "id": "2",

@@ -39,6 +39,13 @@ class AppController extends Controller {
     return ret
   }
 
+  async userPageConfig(args, ret) {
+    let data = appDataJson.userPage || null
+    this.LOG.info(args.uuid, '/userPageConfig data', data)
+    ret.data = data
+    return ret
+  }
+
   async countdown(args, ret) {
     let now = parseInt(Date.now() / 1000)
     let today = this.UTILS.dateUtils.dateFormat(null, 'YYYY-MM-DD')

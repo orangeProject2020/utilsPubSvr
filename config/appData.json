@@ -13,6 +13,9 @@
       "notes": ["修复若干bug"]
     }
   },
+  "userPage": {
+    "isIosUpdate": 0
+  },
   "banners": [{
     "id": "1",
     "title": "banner1",
